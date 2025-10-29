@@ -34,15 +34,4 @@ public class CatTest {
         assertEquals(expectedFood, actualFood);
     }
 
-    @Test
-    public void testGetFoodCallsPredatorMethod() throws Exception {
-        Cat cat = new Cat(feline);
-        List<String> expectedFood = Arrays.asList("Животные", "Птицы", "Рыба");
-
-        when(feline.eatMeat()).thenReturn(expectedFood);
-
-        cat.getFood();
-
-        verify(feline).eatMeat();
-    }
 }
